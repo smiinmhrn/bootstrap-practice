@@ -50,3 +50,9 @@ form {
 .second-section .custom-link img {
   width: 1.3rem;
 }
+.third-section {
+  background-color: hsl(238, 22%, 44%);
+}
+.third-section {
+  height: 350px;
+}
