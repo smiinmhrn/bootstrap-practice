@@ -1,7 +1,7 @@
 body {
   font-family: "Open Sans", sans-serif;
+  overflow-x: hidden;
 }
-
 h1,
 h2,
 h3,
@@ -55,4 +55,43 @@ form {
 }
 .third-section {
   height: 350px;
+}
+
+.custom-footer {
+  background-color: hsl(243, 87%, 12%);
+  height: 350px;
+}
+.custom-footer img {
+  width: 13rem;
+}
+/* .custom-footer .row .table-custom-color {
+  background-color: hsl(243, 87%, 12%);
+} */
+/* .custom-table {
+  background-color: transparent;
+} */
+/* .custom-footer .contacts{
+  width: 1rem;
+} */
+.bi {
+  color: white;
+  border: white solid 1px;
+  border-radius: 100%;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+footer a:hover {
+  color: hsl(224, 93%, 58%);
+  text-decoration: none;
+}
+footer i:hover {
+  text-decoration: none;
+  color: hsl(224, 93%, 58%);
+  border: hsl(224, 93%, 58%) solid 1px;
+}
+footer table td {
+  padding: 0.3rem;
 }
