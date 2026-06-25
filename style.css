@@ -1,7 +1,28 @@
+/* =========================
+   Reset
+========================= */
+
+* {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+/* =========================
+   Base
+========================= */
+
 body {
   font-family: "Open Sans", sans-serif;
+  font-size: 16px;
   overflow-x: hidden;
 }
+
+main {
+  width: 100%;
+}
+
 h1,
 h2,
 h3,
@@ -20,59 +41,78 @@ h6,
   padding-right: 5.5rem;
 }
 
-.first-section p,
-form {
-  padding-right: 19rem;
-}
+/* =========================
+   First Section
+========================= */
 
 .first-section h1 {
-  padding-right: 15rem;
   line-height: 4rem;
 }
+
+/* =========================
+   Second Section
+========================= */
 
 .second-section {
   background-color: #f8f8fe;
 }
+
 .second-section .avatar img {
   width: 3rem;
   border-radius: 100%;
 }
+
 .second-section h5 {
   font-size: 1rem;
 }
+
 .second-section h6 {
   font-size: 0.7rem;
 }
+
 .second-section .custom-link {
   text-decoration: none;
   border-bottom: 1px dotted #3da08f;
 }
+
 .second-section .custom-link img {
   width: 1.3rem;
 }
+
+/* =========================
+   Third Section
+========================= */
+
 .third-section {
   background-color: hsl(238, 22%, 44%);
-}
-.third-section {
   height: 350px;
 }
+
+/* =========================
+   Footer
+========================= */
 
 .custom-footer {
   background-color: hsl(243, 87%, 12%);
   height: 350px;
 }
+
 .custom-footer img {
   width: 13rem;
 }
-/* .custom-footer .row .table-custom-color {
-  background-color: hsl(243, 87%, 12%);
-} */
-/* .custom-table {
-  background-color: transparent;
-} */
-/* .custom-footer .contacts{
-  width: 1rem;
-} */
+
+footer .custom-contacts {
+  height: 50px;
+}
+
+footer .custom-contacts .bi {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .bi {
   color: white;
   border: white solid 1px;
@@ -83,15 +123,234 @@ footer a {
   color: white;
   text-decoration: none;
 }
+
 footer a:hover {
   color: hsl(224, 93%, 58%);
   text-decoration: none;
 }
+
 footer i:hover {
-  text-decoration: none;
   color: hsl(224, 93%, 58%);
   border: hsl(224, 93%, 58%) solid 1px;
+  text-decoration: none;
 }
+
 footer table td {
   padding: 0.3rem;
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media screen and (max-width: 989px) {
+  section .custom-container,
+  .second-section .custom-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  section .custom-container {
+    text-align: center;
+  }
+
+  .custom-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  /* =====================
+     Header
+  ===================== */
+
+  header {
+    margin: 0 !important;
+  }
+
+  header .custom-container {
+    padding-right: 0;
+  }
+
+  .navbar {
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar-nav {
+    gap: 0.3rem !important;
+  }
+
+  .nav-link {
+    font-size: 0.7rem;
+    padding: 0.3rem 0;
+  }
+
+  .custom-logo img {
+    width: 6rem;
+    height: auto;
+  }
+
+  /* =====================
+     First Section
+  ===================== */
+
+  .first-section .col-lg-6:first-child {
+    order: 2;
+  }
+
+  .first-section .col-lg-6:last-child {
+    order: 1;
+  }
+
+  .first-section h1 {
+    font-size: 1.2rem;
+    line-height: 2rem;
+  }
+
+  .first-section p {
+    margin: 0;
+    padding: 0;
+    font-size: 0.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .first-section img {
+    margin-bottom: 3rem;
+  }
+
+  /* =====================
+     Second Section
+  ===================== */
+
+  .second-section {
+    margin: 0;
+    padding: 0;
+  }
+
+  .second-section .col-lg-6:first-child {
+    order: 2;
+  }
+
+  .second-section .col-lg-6:last-child {
+    order: 1;
+  }
+
+  .second-section img {
+    margin-bottom: 5rem;
+    padding-bottom: 2rem;
+  }
+
+  .second-section .section-text,
+  .second-section .card-text {
+    text-align: start;
+  }
+
+  .second-section h1 {
+    font-size: 1rem;
+  }
+
+  .second-section p {
+    font-size: 0.85rem;
+  }
+
+  .second-section h5,
+  .second-section h6 {
+    font-size: 0.7rem;
+  }
+
+  .second-section .card-text {
+    font-size: 0.7rem;
+  }
+
+  .second-section .custom-link {
+    font-size: 0.9rem;
+    margin-top: 2rem;
+  }
+
+  .second-section .custom-link img,
+  .second-section .icon-quotes,
+  .avatar img {
+    margin: 0;
+    padding: 0;
+  }
+
+  .second-section .img-custom-container {
+    width: 100%;
+    display: flex;
+    align-items: start;
+    margin-bottom: 1rem;
+  }
+
+  .second-section .avatar {
+    padding: 0;
+  }
+
+  .custom-card {
+    width: 100%;
+    max-width: 320px;
+    margin-inline: auto;
+    font-size: 0.8rem;
+  }
+
+  .avatar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .avatar img {
+    width: 40px;
+    height: 45px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .avatar h5,
+  .avatar h6 {
+    margin: 0;
+    text-align: start;
+  }
+
+  /* =====================
+     Third Section
+  ===================== */
+
+  .third-section {
+    height: 100%;
+  }
+
+  .third-section .custom-row {
+    padding: 5rem 0;
+  }
+
+  .third-section .custom-row h1 {
+    font-size: 1.5rem;
+  }
+
+  .third-section .custom-row p {
+    font-size: 0.95rem;
+  }
+
+  .third-section button {
+    width: 100%;
+  }
+
+  /* =====================
+     Footer
+  ===================== */
+
+  .custom-footer {
+    height: 800px;
+  }
+
+  .custom-footer .col-lg {
+    margin-bottom: 4rem;
+  }
+
+  .custom-footer .logo {
+    padding-top: 2rem;
+  }
+
+  .custom-footer .custom-contacts {
+    justify-content: center;
+  }
 }
