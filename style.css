@@ -78,6 +78,9 @@ h6,
 .second-section .custom-link img {
   width: 1.3rem;
 }
+.second-section .custom-card {
+  width: 25rem;
+}
 
 /* =========================
    Third Section
@@ -94,9 +97,12 @@ h6,
 
 .custom-footer {
   background-color: hsl(243, 87%, 12%);
-  height: 350px;
+  min-height: 350px;
+  height: auto;
 }
-
+.custom-footer .container-fluid {
+  height: auto !important;
+}
 .custom-footer img {
   width: 13rem;
 }
@@ -142,8 +148,35 @@ footer table td {
 /* =========================
    Responsive
 ========================= */
+@media screen and (max-width: 991px) {
+  .custom-footer .col-lg {
+    margin-bottom: 4rem;
+  }
+  .first-section .col-lg-6:first-child {
+    order: 2;
+  }
 
-@media screen and (max-width: 989px) {
+  .first-section .col-lg-6:last-child {
+    order: 1;
+  }
+  .first-section img {
+    margin-bottom: 3rem;
+  }
+  .third-section {
+    height: 100%;
+  }
+
+  .third-section .custom-row {
+    padding: 5rem 0;
+  }
+  .third-section button {
+    width: 100%;
+  }
+  .third-section .custom-text {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 540px) {
   section .custom-container,
   .second-section .custom-container {
     padding-left: 2rem;
@@ -193,14 +226,6 @@ footer table td {
      First Section
   ===================== */
 
-  .first-section .col-lg-6:first-child {
-    order: 2;
-  }
-
-  .first-section .col-lg-6:last-child {
-    order: 1;
-  }
-
   .first-section h1 {
     font-size: 1.2rem;
     line-height: 2rem;
@@ -213,8 +238,8 @@ footer table td {
     margin-bottom: 1.5rem;
   }
 
-  .first-section img {
-    margin-bottom: 3rem;
+  .second-section .custom-card {
+    width: auto;
   }
 
   /* =====================
@@ -314,24 +339,12 @@ footer table td {
      Third Section
   ===================== */
 
-  .third-section {
-    height: 100%;
-  }
-
-  .third-section .custom-row {
-    padding: 5rem 0;
-  }
-
   .third-section .custom-row h1 {
     font-size: 1.5rem;
   }
 
   .third-section .custom-row p {
     font-size: 0.95rem;
-  }
-
-  .third-section button {
-    width: 100%;
   }
 
   /* =====================
@@ -342,15 +355,14 @@ footer table td {
     height: 800px;
   }
 
-  .custom-footer .col-lg {
-    margin-bottom: 4rem;
-  }
-
   .custom-footer .logo {
     padding-top: 2rem;
   }
 
   .custom-footer .custom-contacts {
     justify-content: center;
+  }
+  .custom-footer {
+    font-size: 0.9rem;
   }
 }
